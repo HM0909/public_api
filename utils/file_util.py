@@ -1,5 +1,6 @@
 import csv
 
+CSV_FILE_ENCODING ="utf-8-sig"
 FILE_ENCODING ="utf-8"
 NEW_LINE = '\n'
 
@@ -29,7 +30,7 @@ def csv_writer(file_path, datas, header):
         
 def csv_reader(file_path):
     result = []        
-    f = open(file_path, 'r', encoding='utf-8')
+    f = open(file_path, 'r', encoding=CSV_FILE_ENCODING)
     rdr = csv.reader(f)
     for line in rdr:
         result.append(line)
